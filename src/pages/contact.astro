@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+const siteTitle = 'Fully Fit Studio';
+---
+
+<Layout>
+  <Fragment slot="title">{siteTitle} | Contact</Fragment>
+
+  <main style="max-width: 900px; margin: 0 auto; padding: 2rem;">
+    <section style="text-align: center; padding: 3rem 0;">
+      <h1 style="color: #d1d5db;">Get in touch</h1>
+      <p style="color: #d1d5db; font-size: 1.2rem;">We look forward to working with you.</p>
+    </section>
+
+    <section style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+      <div style="border: 1px solid #ccc; padding: 1rem; border-radius: 8px; flex: 1; min-width: 220px; background: white;">
+        <h3 style="color: #000000;">Arek Kubicki</h3>
+        <p>Personal trainer and warriors enthusiast.</p>
+      </div>
+      <div style="border: 1px solid #ccc; padding: 1rem; border-radius: 8px; flex: 1; min-width: 220px; background: white;">
+        <h3 style="color: #000000;">Sacha Donovan</h3>
+        <p>Strength and conditioning coach.</p>
+      </div>
+    </section>
+
+    <section style="margin-top: 2rem; border: 1px solid #ccc; border-radius: 8px; padding: 1.5rem; background: white;">
+      <h3 style="color: #000000;">Visit us</h3>
+      <p>Fully Fit PT Studio</p>
+      <p>178 Hibiscus Coast Highway</p>
+      <p>Auckland</p>
+      <p>New Zealand</p>
+    </section>
+
+    <section style="margin-top: 2rem; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; background: white;">
+      <iframe
+        title="Fully Fit Studio location"
+        src="https://www.google.com/maps?q=178%20Hibiscus%20Coast%20Highway%20New%20Zealand&z=12&output=embed"
+        width="100%"
+        height="350"
+        style="border: 0; display: block;"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+  </main>
+</Layout>

@@ -1,38 +1,26 @@
 ---
-// Any server-side logic (like importing other components) goes here.
-const siteTitle = "Fully Fit Studio";
+import Layout from '../layouts/Layout.astro';
+const siteTitle = 'Fully Fit PT Studio';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{siteTitle}</title>
-    <style>
-      body { font-family: sans-serif; line-height: 1.6; padding: 2rem; max-width: 800px; margin: auto; }
-      .hero { text-align: center; padding: 3rem 0; }
-      h1 { color: #333; }
-      .services { display: flex; gap: 1rem; margin-top: 2rem; }
-      .card { border: 1px solid #ccc; padding: 1rem; border-radius: 8px; flex: 1; }
-    </style>
-  </head>
-  <body>
-    <main>
-      <section class="hero">
-        <h1>Welcome to Fully Fit Studio!</h1>
-        <p>We optimise humans for peak performance.</p>
-      </section>
+<Layout>
+  <Fragment slot="title">{siteTitle}</Fragment>
 
-      <section class="services">
-        <div class="card">
-          <h3>Exclusive Personal Training Studio</h3>
-          <p>We provide personal training with tailored programs to deliver real results.</p>
-        </div>
-        <div class="card">
-          <h3>HIIT Training</h3>
-          <p>Run around like a crazy person. You know you want to.</p>
-        </div>
-      </section>
-    </main>
-  </body>
-</html>
+  <main style="max-width: 900px; margin: 0 auto; padding: 2rem;">
+    <section style="text-align: center; padding: 3rem 0;">
+      <h1 style="color: #d1d5db;">Welcome to Fully Fit PT Studio</h1>
+      <p style="color: #d1d5db; font-size: 1.2rem;">Personalised training that works.</p>
+    </section>
+
+    <section style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+      <div style="border: 1px solid #ccc; padding: 1rem; border-radius: 8px; flex: 1; min-width: 220px; background: white;">
+        <h3 style="color: #000000;">Exclusive Personal Training</h3>
+        <p>We provide a highly personalised training experience with tailored programs to deliver real results.</p>
+      </div>
+      <div style="border: 1px solid #ccc; padding: 1rem; border-radius: 8px; flex: 1; min-width: 220px; background: white;">
+        <h3 style="color: #000000;">HIIT Training</h3>
+        <p>High-intensity interval training for maximum calorie burn and cardiovascular fitness.</p>
+      </div>
+    </section>
+  </main>
+</Layout>

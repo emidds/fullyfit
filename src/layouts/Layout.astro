@@ -1,5 +1,6 @@
 ---
 import SiteBanner from '../components/SiteBanner.astro';
+const { title = 'Fully Fit PT Studio' } = Astro.props;
 ---
 
 <!doctype html>
@@ -8,7 +9,7 @@ import SiteBanner from '../components/SiteBanner.astro';
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title><slot name="title">Fully Fit PT Studio</slot></title>
+    <title>{title}</title>
   </head>
   <body>
     <SiteBanner />

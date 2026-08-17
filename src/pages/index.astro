@@ -1,13 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import weightsImage from '../assets/weights.jpg';
 const siteTitle = 'Fully Fit PT Studio';
 ---
 
 <Layout title={siteTitle}>
   <main style="max-width: 900px; margin: 0 auto; padding: 2rem;">
     <section style="text-align: center; padding: 3rem 0;">
-      <h1 style="color: #d1d5db;">Welcome to Fully Fit PT Studio</h1>
-      <p style="color: #d1d5db; font-size: 1.2rem;">Personalised training that works.</p>
+      <h1 style="color: #d1d5db;">Come and train with the Fully Fit team</h1>
+      <!-- p style="color: #d1d5db; font-size: 1.2rem;">Personalised training that works.</p -->
+    </section>
+
+    <section style="margin: 2rem 0; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);">
+      <img
+        src={weightsImage.src}
+        alt="Weights and fitness equipment"
+        style="display: block; width: 100%; height: 360px; object-fit: cover;"
+      />
     </section>
 
     <section style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">

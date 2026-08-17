@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+const siteTitle = 'Our Studio';
+---
+
+<Layout title={siteTitle}>
+  <main style="max-width: 900px; margin: 0 auto; padding: 2rem; color: #f3f4f6;">
+    <section style="padding: 3rem 0;">
+      <h1 style="margin-bottom: 1rem;">Our Studio</h1>
+      <p style="font-size: 1.1rem; line-height: 1.7; max-width: 700px;">
+        Fully Fit is a premium personal training studio designed to help clients train with confidence,
+        consistency, and purpose. Our environment balances expertise, motivation, and support so every
+        session feels focused and effective.
+      </p>
+    </section>
+
+    <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+      <div style="background: #ffffff; color: #111111; border-radius: 10px; padding: 1.25rem;">
+        <h3>Private Coaching</h3>
+        <p>One-to-one personal training tailored to your goals, ability, and schedule.</p>
+      </div>
+      <div style="background: #ffffff; color: #111111; border-radius: 10px; padding: 1.25rem;">
+        <h3>Expert Guidance</h3>
+        <p>Structured programming and coaching that keeps your progress measurable and sustainable.</p>
+      </div>
+      <div style="background: #ffffff; color: #111111; border-radius: 10px; padding: 1.25rem;">
+        <h3>Results Focused</h3>
+        <p>We combine strength, conditioning, and accountability for long-term results.</p>
+      </div>
+    </section>
+  </main>
+</Layout>

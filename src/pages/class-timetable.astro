@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+const siteTitle = 'Class Timetable';
+const timetable = [
+  { day: 'Monday', slots: '11:45 AM – HIIT Group Training'  },
+  { day: 'Tuesday', slots: '11:45 AM – HIIT Group Training' },
+  { day: 'Wednesday', slots: '12:30 PM – HIIT Group Training' },
+  { day: 'Thursday', slots: '11:45 AM – HIIT Group Training' },
+  { day: 'Friday', slots: '12:30 PM – HIIT Group Training' },
+];
+---
+
+<Layout title={siteTitle}>
+  <main style="max-width: 900px; margin: 0 auto; padding: 2rem; color: #f3f4f6;">
+    <section style="padding: 2rem 0 1rem;">
+      <h1 style="margin-bottom: 1rem;">Class Timetable</h1>
+      <p style="font-size: 1.05rem; line-height: 1.7; max-width: 700px;">
+        Our weekly class timetable is designed to keep training varied, energising, and results-focused.
+      </p>
+    </section>
+
+    <section style="margin-top: 1.5rem; background: #ffffff; border-radius: 12px; overflow: hidden;">
+      <table style="width: 100%; border-collapse: collapse; color: #111111;">
+        <thead>
+          <tr style="background: #f3f4f6;">
+            <th style="padding: 1rem; text-align: left; border-bottom: 1px solid #d1d5db;">Day</th>
+            <th style="padding: 1rem; text-align: left; border-bottom: 1px solid #d1d5db;">Classes</th>
+          </tr>
+        </thead>
+        <tbody>
+          {timetable.map((entry) => (
+            <tr>
+              <td style="padding: 1rem; border-bottom: 1px solid #e5e7eb; font-weight: 700;">{entry.day}</td>
+              <td style="padding: 1rem; border-bottom: 1px solid #e5e7eb;">{entry.slots}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+  </main>
+</Layout>

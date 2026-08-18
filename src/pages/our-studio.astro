@@ -1,6 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 const siteTitle = 'Our Studio';
+const recentPosts = [
+  { label: 'Post 1', color: '#d1d5db' },
+  { label: 'Post 2', color: '#a3a3a3' },
+  { label: 'Post 3', color: '#e5e7eb' },
+  { label: 'Post 4', color: '#9ca3af' },
+  { label: 'Post 5', color: '#f3f4f6' },
+  { label: 'Post 6', color: '#d4d4d8' },
+];
 ---
 
 <Layout title={siteTitle}>
@@ -26,6 +34,38 @@ const siteTitle = 'Our Studio';
       <div style="background: #ffffff; color: #111111; border-radius: 10px; padding: 1.25rem;">
         <h3>Results Focused</h3>
         <p>We combine strength, conditioning, and accountability for long-term results.</p>
+      </div>
+    </section>
+
+    <section style="margin-top: 3rem;">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
+        <h2 style="margin: 0; color: #f3f4f6;">Follow us on Instagram</h2>
+        <a
+          href="https://www.instagram.com/fullyfit_pt_studio/"
+          target="_blank"
+          rel="noreferrer"
+          style="color: #ffffff; text-decoration: underline; font-weight: 700;"
+        >
+          @fullyfit_pt_studio
+        </a>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem;">
+        {recentPosts.map((post) => (
+          <a
+            href="https://www.instagram.com/fullyfit_pt_studio/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`${post.label} on Instagram`}
+            style={`display: block; background: ${post.color}; border-radius: 12px; aspect-ratio: 1; position: relative; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.18);`}
+          >
+            <span
+              style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #111111; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; background: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(0,0,0,0.12));"
+            >
+              {post.label}
+            </span>
+          </a>
+        ))}
       </div>
     </section>
   </main>

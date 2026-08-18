@@ -1,32 +1,46 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import arekImage from '../assets/arek.jpeg';
 const siteTitle = 'Fully Fit Studio';
 ---
 
 <Layout title={`${siteTitle} | Contact`}>
   <main style="max-width: 900px; margin: 0 auto; padding: 2rem;">
-    <section style="text-align: center; padding: 3rem 0;">
-      <h1 style="color: #d1d5db;">Get in touch</h1>
-      <p style="color: #d1d5db; font-size: 1.2rem;">We look forward to working with you.</p>
+    <section style="text-align: center; padding: 1rem 0;">
+      <h1 style="color: #d1d5db;">Our Trainers</h1>
+      <!-- p style="color: #d1d5db; font-size: 1.2rem;">We look forward to working with you.</p -->
     </section>
 
+    <!-- Areks profile -->
+    <section style="margin-top: 2rem; border: 1px solid #ccc; border-radius: 8px; background: white; padding: 2rem;">
+      <h2 style="color: #000000; margin-top: 0;">Arek Kubicki</h2>
+      <img
+        src={arekImage.src}
+        alt="Arek Kubicki"
+        style="float: right; width: 280px; height: auto; margin-left: 1rem; margin-bottom: 1rem; border-radius: 8px; object-fit: cover;"
+      />
+      <p>As a father, business owner, and personal trainer with over 20 years of experience in the fitness industry, Arek brings a wealth of knowledge, experience, and genuine passion to every client he works with.</p>
+      <p>His approach is simple: help people become stronger, healthier, and more confident while working towards goals that matter to them. Whether it’s achieving a major transformation, improving fitness, building strength, or simply feeling better day to day, Arek is passionate about helping people reach their goals — big or small.</p>
+      <p>With two decades of hands-on experience, Arek understands that everyone is different. He takes the time to understand each person’s needs and creates practical, achievable training approaches designed to deliver lasting results.</p>
+      <p>For Arek, personal training is about more than just exercise — it’s about helping people believe in themselves and become the best version of who they can be.</p>
+      <h3 style="color: #000000;">Contact Arek</h3>
+      <p>Email: <a href="mailto:arek@fullyfit.co.nz">arek@fullyfit.co.nz</a></p>
+      <p>Phone: 022 087 3930</p>
+    </section>
+
+    <!-- Sachas profile -->
     <section style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
-      <div style="border: 1px solid #ccc; padding: 1rem; border-radius: 8px; flex: 1; min-width: 220px; background: white;">
-        <h3 style="color: #000000;">Arek Kubicki</h3>
-        <p>Personal trainer and warriors enthusiast.</p>
-      </div>
-      <div style="border: 1px solid #ccc; padding: 1rem; border-radius: 8px; flex: 1; min-width: 220px; background: white;">
+      <div style="border: 1px solid #ccc; padding: 2rem; border-radius: 8px; flex: 1; min-width: 220px; background: white;">
         <h3 style="color: #000000;">Sacha Donovan</h3>
-        <p>Strength and conditioning coach.</p>
+        <p>Strength and conditioning coach - profile coming soon.</p>
       </div>
     </section>
 
+    <!-- Contact details -->
     <section style="margin-top: 2rem; border: 1px solid #ccc; border-radius: 8px; padding: 1.5rem; background: white;">
       <h3 style="color: #000000;">Visit us</h3>
-      <p>Fully Fit PT Studio</p>
-      <p>178 Hibiscus Coast Highway</p>
-      <p>Auckland</p>
-      <p>New Zealand</p>
+      <p>Fully Fit PT Studio <br /> 178 Hibiscus Coast Highway <br /> Auckland <br /> New Zealand
+      </p>
     </section>
 
     <section style="margin-top: 2rem; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; background: white;">

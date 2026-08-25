@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+const siteTitle = 'Testimonials';
+
+const testimonials = [
+  {
+    quote: `I can’t recommend Arek highly enough! I’ve been training with Arek for just over a year, and during that time I’ve lost almost 16kg. The results have been amazing, but what I appreciate most is the support, motivation and encouragement he’s given me throughout the whole journey. Arek is professional, knowledgeable, patient and genuinely cares about helping you reach your goals. He knows when to push you, keeps you motivated even on the tougher days. I’m so grateful for everything he has helped me achieve, not only with the weight loss, but also with my confidence, fitness and overall wellbeing. If you’re looking for a personal trainer who will truly support you and get results, I couldn’t recommend Arek more highly.`,
+    name: 'Penny',
+  },
+  { quote: 'Training with Arek has honestly become one of the highlights of my week. He knows exactly how to push me past what I think I’m capable of, while still making our sessions fun and full of laughs. With his support, I’ve become stronger and more confident and achieved things I never thought I could. He genuinely cares about his clients and their goals, and somehow always gets more out of me than I think I have,even on the days when I turn up tired or not really feeling it. I honestly couldn’t imagine training with anyone else.', name: 'Sandy' },
+  // { quote: 'Add a third client quote here when you are ready.', name: 'Client name' },
+];
+---
+
+<Layout title={siteTitle}>
+  <main style="max-width: 900px; margin: 0 auto; padding: 2rem; color: #f3f4f6;">
+    <section style="padding: 1rem 0;">
+      <h1 style="margin-bottom: 1rem;">What our clients say</h1>
+      <p style="font-size: 1.05rem; line-height: 1.7; max-width: 700px;">
+        Real experiences from people working towards their goals with the Fully Fit team.
+      </p>
+    </section>
+
+    <section aria-label="Client testimonials" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
+      {testimonials.map((testimonial) => (
+        <blockquote style="display: flex; flex-direction: column; justify-content: space-between; min-height: 220px; margin: 0; padding: 1.5rem; border-left: 5px solid #b7943d; border-radius: 8px; background: #ffffff; color: #111111;">
+          <p style="margin-top: 0; font-size: 1.1rem; line-height: 1.7;">&ldquo;{testimonial.quote}&rdquo;</p>
+          <cite style="font-style: normal; font-weight: 700; text-align: right;">- {testimonial.name}</cite>
+        </blockquote>
+      ))}
+    </section>
+  </main>
+</Layout>
